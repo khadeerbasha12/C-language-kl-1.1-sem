@@ -2,7 +2,7 @@
 void print(int a)
 {
 	int x[100];
-	int i,max=0;
+	int i,sum=0;
 	printf("enter the resistance");
 	for(i=0;i<a;i++)
 	{
@@ -11,11 +11,9 @@ void print(int a)
 	printf("the resistances entered are=");
 	for(i=0;i<a;i++){
 	printf("%d ",x[i]);
-	if(max<x[i])
-	max=x[i];
+	sum+=x[i];
 	}
-		printf("\nthe max is=%d",max);
-
+	printf("\nthe total resistance is=%d",sum);
 }
 int main()
 {
