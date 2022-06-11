@@ -1,17 +1,20 @@
 #include<stdio.h>
-int sum_natural(int n)
+int digit(int n)
 {
+	static int x=0;
 	if(n==0)
 	return 0;
-	else
-	return n+sum_natural(n-1);
+	else{
+	x++;
+	digit(n/10);}
+	return x;
 }
 int main()
 {
-	int n,s;
+	int n;
 	printf("enter the number");
 	scanf("%d",&n);
-	s=sum_natural(n);
-	printf("%d",s);
+	int a=digit(n);
+	printf("%d",a);
 	return 0;
 }

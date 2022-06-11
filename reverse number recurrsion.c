@@ -1,17 +1,20 @@
 #include<stdio.h>
-int sum_natural(int n)
+int reverse(int n)
 {
+	int x;
 	if(n==0)
 	return 0;
 	else
-	return n+sum_natural(n-1);
+	x=n%10;
+	printf("%d",x);
+	reverse(n/10);
 }
 int main()
 {
-	int n,s;
+	int n;
 	printf("enter the number");
 	scanf("%d",&n);
-	s=sum_natural(n);
-	printf("%d",s);
+	printf("the reverse number is=");
+	reverse(n);
 	return 0;
 }

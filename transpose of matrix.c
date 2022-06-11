@@ -3,7 +3,6 @@ int main()
 {
 	int a[10][10];
 	int m,n;
-	int sum=0,sum1=0;
 	int i,j;
 	printf("Enter number of rows:");
 	scanf("%d",&m);
@@ -13,33 +12,20 @@ int main()
 	for(i=0;i<m;i++)
 	for(j=0;j<n;j++)
 	scanf("%d",&a[i][j]);
-	printf("\nMatrix is\n");
+	printf("\nMatrix in\n");
 	for(i=0;i<m;i++)
 	{
 		for(j=0;j<n;j++)
 		printf("%d ",a[i][j]);
 		printf("\n");
 	}
+	printf("\n transpose matrix is\n");
 	for(i=0;i<m;i++)
 	{
 		for(j=0;j<n;j++)
-		{
-		if(i==n/2)
-		{
-			printf("%d ",a[i][j]);
-		}
-}
+		printf("%d ",a[j][i]);
+		printf("\n");
+		
 	}
-		for(i=0;i<m;i++)
-	{
-		for(j=0;j<n;j++)
-		{
-		if(j==n/2)
-		{
-			printf("%d",a[j][i]);
-		}
-}
-	}
-
 	return 0;
 }

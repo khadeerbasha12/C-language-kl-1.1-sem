@@ -24,22 +24,17 @@ int main()
 	{
 		for(j=0;j<n;j++)
 		{
-		if(i==n/2)
+		if(i==j)
 		{
-			printf("%d ",a[i][j]);
+		sum=sum+a[i][j];
 		}
-}
-	}
-		for(i=0;i<m;i++)
-	{
-		for(j=0;j<n;j++)
+		if(j==n-1-i)
 		{
-		if(j==n/2)
-		{
-			printf("%d",a[j][i]);
-		}
-}
+		sum1=sum1+a[i][j];}
 	}
-
+	}
+	printf("the sum of principal diagonal is=%d\n",sum);
+	printf("the sum of secondary diagonal is=%d\n",sum1);
+	printf("the difference between two diagonal is=%d",sum-sum1);
 	return 0;
 }

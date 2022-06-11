@@ -3,7 +3,7 @@ int main()
 {
 	int a[10][10];
 	int m,n;
-	int sum=0,sum1=0;
+	int sum=0,diff=0;
 	int i,j;
 	printf("Enter number of rows:");
 	scanf("%d",&m);
@@ -23,23 +23,12 @@ int main()
 	for(i=0;i<m;i++)
 	{
 		for(j=0;j<n;j++)
+		if(i==j)
 		{
-		if(i==n/2)
-		{
-			printf("%d ",a[i][j]);
-		}
-}
-	}
-		for(i=0;i<m;i++)
-	{
-		for(j=0;j<n;j++)
-		{
-		if(j==n/2)
-		{
-			printf("%d",a[j][i]);
-		}
-}
-	}
-
+		sum=sum+a[i][j];
+		diff=a[i][j]-diff;
+	}}
+	printf("the sum is=%d",sum);
+	printf("\nthe difference is=%d",diff);
 	return 0;
 }
