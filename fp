@@ -1,0 +1,1 @@
+the average is=4.700000
